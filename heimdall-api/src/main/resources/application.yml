@@ -4,12 +4,16 @@ info:
         name: "@name@"
         description: "@description@"
         version: "@project.version@"
-        captchaKey: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
-        captchaEnabled: true
+        captchaKey: 6Lc9UDwbAAAAAB4bZuBVu1X0TBSlftlkgprhxN80
+        captchaEnabled: false
+
+ 
 
 server:
     context-path: /
     port: 9090
+
+ 
 
 heimdall:
     contextPath: /heimdall/v1
@@ -39,10 +43,10 @@ heimdall:
         appName: HEIMDALL
         databaseName: heimdall
         portNumber: 5432
-        serverName: 127.0.0.1
+        serverName: localhost
         username: postgres
-        password: 123456
-        runLiquibase: true
+        password: postgres
+        runLiquibase: false
         sendStringParametersAsUnicode: false
     mongo:
         enabled: false
@@ -79,6 +83,8 @@ heimdall:
         allowInactive: 0
         deleteDeprecated: false
 
+ 
+
 spring:
     pid:
         fail-on-write-error: false
@@ -95,7 +101,7 @@ spring:
     jackson:
         serialization:
             INDENT_OUTPUT: true
-            WRITE-DATES-AS-TIMESTAMPS: false
+            WRITE_DATES_AS_TIMESTAMPS: false
     rabbitmq:
         host: 127.0.0.1
         port: 5672
@@ -109,11 +115,15 @@ spring:
             max-file-size: 25MB
             max-request-size: 25MB
 
+ 
+
 springfox:
     documentation:
         swagger:
             v2:
                 path: /docs
+
+ 
 
 endpoints:
     routes:
@@ -124,6 +134,8 @@ endpoints:
     trace:
         filter:
             enabled: false
+
+ 
 
 management:
     context-path: /manager
@@ -141,10 +153,14 @@ management:
         refresh:
             enabled: false
 
+ 
+
 zuul:
     filter:
         root: /tmp/interceptors
         interval: 8
+
+ 
 
 security:
     basic:

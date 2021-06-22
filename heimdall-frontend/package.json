@@ -45,7 +45,7 @@
     "swagger-ui": "3.23.11"
   },
   "scripts": {
-    "start": "node env.js && mv env-config.js ./public/ && react-app-rewired start",
+    "start": "node env.js && move env-config.js ./public/ && react-app-rewired start",
     "build:hmlg": "react-app-rewired build && dotenv -e .env.hmlg node env.js ./build/index.html && mv env-config.js ./build/",
     "build": "react-app-rewired build &&  rm build/static/**/*.map && dotenv -e .env.production node env.js ./build/index.html && mv env-config.js ./build/",
     "test": "react-app-rewired test --env=jsdom",
